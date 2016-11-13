@@ -1,0 +1,12 @@
+:root{
+	--main-bg-color: #424242;
+	--main-fg-color: #EEEEEE;
+}
+
+body{
+	background-color: var(--main-bg-color);
+}
+
+.title{
+	color: var(--main-fg-color);
+}
