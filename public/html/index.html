@@ -1,13 +1,51 @@
+<!doctype html>
 <html>
 <head>
+	<meta charset="utf-8">
 
-  <script src="webcomponents.js/webcomponents.js"></script>
+	<!-- Polyfill -->
+	<script src="webcomponents.js/webcomponents.min.js"></script>
 
-  <link rel="icon" href="favicon.png" type="image/png"/>
-  <link rel="stylesheet" type="text/css" href="index.css">
-  <title>Node Global Test Server</title>
+	<!-- Imports -->
+	<link rel="icon" href="favicon.png" type="image/png"/>
+	<link rel="stylesheet" type="text/css" href="index.css">
+
+	<link rel="import" href="youtube-login/youtube-login.html">
+  <link rel="import" href="youtube-wc/youtube-wc.html">
+
+	<title>Node Global Test Server</title>
 </head>
 <body>
-  <h1 class="title">Global Test Server</h1>
+	<h1 class="title">Global Test Server</h1>
+
+	<template is="dom-bind" id="Demo">
+
+		<youtube-login
+      client_id="643464834207-pmbgf26rk5a9ugvkjub7a9e2am3jhcd1.apps.googleusercontent.com"
+      redirect_uri="https://localhost:8080/"
+    >
+    </youtube-login>
+
+    <youtube-wc
+      token="ya29.Ci-SA1qfwNxoGly6jSGMqnHCA1dIBYTEHY2O37G2xlhGrnQeka5bT_oLkUi8uzoE9Q"
+      api_key="AIzaSyDbs_ZJQLM6poQPJJ9GVNjbJkCCWP83pJw"
+      client_id="643464834207-pmbgf26rk5a9ugvkjub7a9e2am3jhcd1.apps.googleusercontent.com"
+      component_base="/static/youtube-wc/"
+      language="{{language}}"
+    >
+    </youtube-wc>
+
+		<button on-click="prueba" name="es">Spanish</button>
+		<button on-click="prueba" name="en">English</button>
+
+		<script>
+			Demo.language = "es";
+			Demo.prueba = function(event, detail) {
+				Demo.language = event.target.getAttribute('name');
+			}
+		</script>
+
+	</template>
+
 </body>
 </html>

@@ -21,6 +21,6 @@ app.get('/', function (req, res) {
 });
 
 var server = https.createServer({
-    key: fs.readFileSync('key.pem'),
-    cert: fs.readFileSync('ssl.crt')
+    key: fs.readFileSync('ssl/key.pem'),
+    cert: fs.readFileSync('ssl/ssl.crt')
 }, app).listen(8080);
