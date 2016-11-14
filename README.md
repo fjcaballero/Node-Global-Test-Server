@@ -3,15 +3,16 @@
 
 ---
 ##Install
-As we are using SASS you need to install Ruby:
+As we are using SASS you need to install Ruby:   
 `sudo apt-get install ruby-full`
 
-Then you have to install SASS:
+Then you have to install SASS:   
 `sudo gem install sass`
 
-And finally you must install the dependencies:
-`npm install` will install the dependencies
+And finally you must install the dependencies:   
+`npm install`
 
 ---
 ##Run
-`npm start` will build the app and run it
+Build and run the server with:   
+`npm start`
