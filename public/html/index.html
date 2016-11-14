@@ -20,13 +20,13 @@
 
 	<template is="dom-bind" id="Demo">
 
-		<youtube-login
+		<youtube-login class="component"
       client_id="643464834207-pmbgf26rk5a9ugvkjub7a9e2am3jhcd1.apps.googleusercontent.com"
       redirect_uri="https://localhost:8080/"
     >
     </youtube-login>
 
-    <youtube-wc
+    <youtube-wc class="component"
       token="ya29.Ci-SA1qfwNxoGly6jSGMqnHCA1dIBYTEHY2O37G2xlhGrnQeka5bT_oLkUi8uzoE9Q"
       api_key="AIzaSyDbs_ZJQLM6poQPJJ9GVNjbJkCCWP83pJw"
       client_id="643464834207-pmbgf26rk5a9ugvkjub7a9e2am3jhcd1.apps.googleusercontent.com"
@@ -35,11 +35,13 @@
     >
     </youtube-wc>
 
-		<button on-click="prueba" name="es">Spanish</button>
-		<button on-click="prueba" name="en">English</button>
+    <div class="lanMenu">
+			<button class="lanButton es" on-click="prueba" name="es">Spanish</button>
+			<button class="lanButton en" on-click="prueba" name="en">English</button>
+    </div>
 
 		<script>
-			Demo.language = "es";
+			Demo.language = "en";
 			Demo.prueba = function(event, detail) {
 				Demo.language = event.target.getAttribute('name');
 			}

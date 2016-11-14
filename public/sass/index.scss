@@ -8,3 +8,22 @@ body{
 .title{
 	color: $fg-color;
 }
+
+.component{
+	margin: 5px;
+}
+
+.lanMenu{
+	position: absolute;
+	top: 0;
+	right: 0;
+	.lanButton{
+		margin: 5px;
+	} 
+	.es{
+		margin-right: 5px;
+	}
+	.en{
+		margin-left: 0;
+	}
+}
