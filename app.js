@@ -1,16 +1,26 @@
 var express = require('express');
-var app = express();
 var path = require("path");
+var https = require('https');
+var fs = require('fs');
+var app = express();
 
-app.use(express.static(__dirname + '/public/resources'));
-app.use(express.static(__dirname + '/public/css'));
-app.use(express.static(__dirname + '/public/js'));
-app.use(express.static(__dirname + '/public/html'));
+//Public files
+app.use(express.static('public/resources'));
+app.use(express.static('public/css'));
+app.use(express.static('public/js'));
+app.use(express.static('public/html'));
+
+//node_modules
+app.use(express.static('node_modules'));
+
+//WebComponents
+app.use(express.static('../WebComponents'));
 
 app.get('/', function (req, res) {
   res.sendFile('index.html');
 });
 
-app.listen(3000, function () {
-  console.log('App listening on port 3000!');
-});
+var server = https.createServer({
+    key: fs.readFileSync('key.pem'),
+    cert: fs.readFileSync('ssl.crt')
+}, app).listen(8080);
