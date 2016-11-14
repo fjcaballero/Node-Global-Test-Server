@@ -12,6 +12,8 @@ app.use(express.static('public/html'));
 
 //node_modules
 app.use(express.static('node_modules'));
+//node_modules
+app.use(express.static('bower_components'));
 
 //WebComponents
 app.use(express.static('../WebComponents'));
