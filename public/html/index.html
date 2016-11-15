@@ -22,8 +22,6 @@
 
 	<template is="dom-bind" id="Demo">
 
-		Token:{{config.youtube_token}}
-
 		<youtube-login class="component"
       client_id="{{config.yt_clientID}}"
       redirect_uri="{{config.yt_redirectURI}}"
@@ -33,7 +31,6 @@
     <youtube-wc class="component"
       token="{{config.yt_token}}"
       api_key="{{config.yt_apiKey}}"
-      client_id="{{config.yt_clientID}}"
       component_base="youtube-wc/"
       language="{{language}}"
     >
