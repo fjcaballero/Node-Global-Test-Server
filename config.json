@@ -1,0 +1,6 @@
+{
+	"yt_token": "your_token",
+	"yt_apiKey": "your_key",
+	"yt_clientID": "your_id",
+	"yt_redirectURI": "your_url"
+}

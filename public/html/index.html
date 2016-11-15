@@ -13,6 +13,8 @@
 	<link rel="import" href="youtube-login/youtube-login.html">
   <link rel="import" href="youtube-wc/youtube-wc.html">
 
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
 	<title>Node Global Test Server</title>
 </head>
 <body>
@@ -20,16 +22,18 @@
 
 	<template is="dom-bind" id="Demo">
 
+		Token:{{config.youtube_token}}
+
 		<youtube-login class="component"
-      client_id="643464834207-pmbgf26rk5a9ugvkjub7a9e2am3jhcd1.apps.googleusercontent.com"
-      redirect_uri="https://localhost:8080/"
+      client_id="{{config.yt_clientID}}"
+      redirect_uri="{{config.yt_redirectURI}}"
     >
     </youtube-login>
 
     <youtube-wc class="component"
-      token="ya29.Ci-SA1qfwNxoGly6jSGMqnHCA1dIBYTEHY2O37G2xlhGrnQeka5bT_oLkUi8uzoE9Q"
-      api_key="AIzaSyDbs_ZJQLM6poQPJJ9GVNjbJkCCWP83pJw"
-      client_id="643464834207-pmbgf26rk5a9ugvkjub7a9e2am3jhcd1.apps.googleusercontent.com"
+      token="{{config.yt_token}}"
+      api_key="{{config.yt_apiKey}}"
+      client_id="{{config.yt_clientID}}"
       component_base="youtube-wc/"
       language="{{language}}"
     >
@@ -45,6 +49,9 @@
 			Demo.prueba = function(event, detail) {
 				Demo.language = event.target.getAttribute('name');
 			}
+			$.getJSON("config", function(json) {
+			    Demo.config = json;
+			});
 		</script>
 
 	</template>

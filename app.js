@@ -22,6 +22,11 @@ app.get('/', function (req, res) {
   res.sendFile('index.html');
 });
 
+app.get('/config', function (req, res) {
+	var json = require('./config.json');
+  res.send(json);
+});
+
 var server = https.createServer({
     key: fs.readFileSync('ssl/key.pem'),
     cert: fs.readFileSync('ssl/ssl.crt')
