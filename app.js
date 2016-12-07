@@ -22,7 +22,7 @@ app.use(express.static('../WebComponents'));
 app.use(express.static('../Versionado'));
 app.use(express.static('../WebComponents2.0'));
 
-app.use(express.static('webcomponents'));
+app.use(express.static('lib'));
 
 app.get('/', function (req, res) {
   res.sendFile('index.html');
