@@ -4,6 +4,8 @@ var https = require('https');
 var fs = require('fs');
 var app = express();
 
+app.set('port', (process.env.PORT || 8080));
+
 //Public files
 app.use(express.static('public/resources'));
 app.use(express.static('public/css'));
@@ -43,4 +45,4 @@ app.get('/webhook', function(req, res) {
 var server = https.createServer({
     key: fs.readFileSync('ssl/key.pem'),
     cert: fs.readFileSync('ssl/ssl.crt')
-}, app).listen(8080);
+}, app).listen(app.get('port'));
