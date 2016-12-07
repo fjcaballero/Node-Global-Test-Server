@@ -11,8 +11,6 @@
 	<link rel="icon" href="favicon.png" type="image/png"/>
 	<link rel="stylesheet" type="text/css" href="index.css">
 <!--
-	<link rel="import" href="youtube-login/youtube-login.html">
-  <link rel="import" href="youtube-wc/youtube-wc.html">
   <link rel="import" href="google-hangout-button/google-hangout-button.html">
 
   <link rel="import" href="WeChat-Web-Component/wechat-login/wechat-login.html">
@@ -21,9 +19,13 @@
   <script src="https://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
 
   <link rel="import" href="pinterest-timeline/pinterest-timeline.html">
--->
-
 	<link rel="import" href="Telegram-Web-Component/telegram-wc.html">
+-->
+	<link rel="import" href="reddit-login/reddit-login.html">
+  <link rel="import" href="reddit-timeline/reddit-timeline.html">
+
+	<link rel="import" href="youtube-login/youtube-login.html">
+  <link rel="import" href="youtube-wc/youtube-wc.html">
 
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
@@ -57,18 +59,6 @@
 		<script type="text/javascript" src="https://apis.google.com/js/platform.js"></script>
 <g:hangout render="createhangout"></g:hangout>
 
-		<youtube-login class="component"
-      client_id="{{config.yt_clientID}}"
-      redirect_uri="{{config.yt_redirectURI}}"
-    >
-    </youtube-login>
-
-    <youtube-wc class="component"
-      token="{{config.yt_token}}"
-      api_key="{{config.yt_apiKey}}"
-      component_base="youtube-wc/"
-      language="{{language}}"
-    >
 
 		<pinterest-timeline class="component"
       token="AVA62Z-XM63uG2AaHIlZLLKQD5QYFHZKY4Xy7atDaxDMLKAvZgAAAAA"
@@ -77,6 +67,35 @@
       >
     </pinterest-timeline>
 -->
+		<reddit-login
+			client_id="kQrG_70aW76SmQ"
+			redirect_uri="https://ngts.herokuapp.com/"
+			client_secret="ApEtzVGv0z0WZMQKPDm4vJJcdNM"
+		>
+		</reddit-login>
+
+		<reddit-timeline
+			client_id="kQrG_70aW76SmQ"
+			client_secret="ApEtzVGv0z0WZMQKPDm4vJJcdNM"
+			token=""
+			refresh_token=""
+		>
+		</reddit-timeline>
+
+		<youtube-login
+      client_id="643464834207-pmbgf26rk5a9ugvkjub7a9e2am3jhcd1.apps.googleusercontent.com"
+      redirect_uri="https://ngts.herokuapp.com/"
+    >
+    </youtube-login>
+
+    <youtube-wc
+      token="ya29.Ci-SA1qfwNxoGly6jSGMqnHCA1dIBYTEHY2O37G2xlhGrnQeka5bT_oLkUi8uzoE9Q"
+      api_key="AIzaSyDbs_ZJQLM6poQPJJ9GVNjbJkCCWP83pJw"
+      client_id="643464834207-pmbgf26rk5a9ugvkjub7a9e2am3jhcd1.apps.googleusercontent.com"
+      component_base="youtube-wc/"
+      language="{{language}}"
+    >
+    </youtube-wc>
 
 
 		<telegram-wc>

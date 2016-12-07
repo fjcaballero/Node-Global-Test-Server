@@ -1,6 +1,6 @@
 {
-	"yt_token": "your_token",
-	"yt_apiKey": "your_key",
-	"yt_clientID": "your_id",
-	"yt_redirectURI": "your_url"
+	"yt_token": "ya29.Ci-aAy99otbvk53lwiwmCULD8w0ADAFeaoBG0-lAVGBqPolbeucSqkjlVFUsDqOKHA",
+	"yt_apiKey": "AIzaSyDbs_ZJQLM6poQPJJ9GVNjbJkCCWP83pJw",
+	"yt_clientID": "643464834207-pmbgf26rk5a9ugvkjub7a9e2am3jhcd1.apps.googleusercontent.com",
+	"yt_redirectURI": "https://localhost:8080/"
 }
