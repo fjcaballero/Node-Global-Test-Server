@@ -1,8 +1,9 @@
 $bg-color: #424242;
 $fg-color: #EEEEEE;
 
-body{
+html,body{
 	background-color: $bg-color;
+	height: 100%;
 }
 
 .title{
