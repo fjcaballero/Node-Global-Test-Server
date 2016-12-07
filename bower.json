@@ -31,6 +31,7 @@
     "paper-menu-button": "PolymerElements/paper-menu-button#~1.5.2",
     "google-hangout-button": "GoogleWebComponents/google-hangout-button#~1.0.2",
     "paper-styles": "PolymerElements/paper-styles#~1.1.5",
-    "iron-media-query": "PolymerElements/iron-media-query#~1.0.8"
+    "iron-media-query": "PolymerElements/iron-media-query#~1.0.8",
+    "telegram-api": "telegram-api-js#^1.2.8"
   }
 }
