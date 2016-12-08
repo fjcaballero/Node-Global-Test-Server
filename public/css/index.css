@@ -1,0 +1,21 @@
+body {
+  background-color: #424242; }
+
+.title {
+  color: #EEEEEE; }
+
+.component {
+  margin: 5px; }
+
+.lanMenu {
+  position: absolute;
+  top: 0;
+  right: 0; }
+  .lanMenu .lanButton {
+    margin: 5px; }
+  .lanMenu .es {
+    margin-right: 5px; }
+  .lanMenu .en {
+    margin-left: 0; }
+
+/*# sourceMappingURL=index.css.map */
