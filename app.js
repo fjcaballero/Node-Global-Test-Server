@@ -1,7 +1,4 @@
 var express = require('express');
-var path = require("path");
-var https = require('https');
-var fs = require('fs');
 var app = express();
 
 app.set('port', (process.env.PORT || 8080));
@@ -17,12 +14,14 @@ app.use(express.static('node_modules'));
 //node_modules
 app.use(express.static('bower_components'));
 
-//WebComponents
+//webcomponents heroku
+app.use(express.static('lib'));
+
+//WebComponents local
 app.use(express.static('../WebComponents'));
 app.use(express.static('../Versionado'));
 app.use(express.static('../WebComponents2.0'));
 
-app.use(express.static('lib'));
 
 app.get('/', function (req, res) {
   res.sendFile('index.html');
