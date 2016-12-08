@@ -5,8 +5,9 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prestart": "sass --watch public/sass:public/css &",
-    "start": "nodemon app.js",
+    "Xprestart": "sass --watch public/sass:public/css &",
+    "Xstart": "nodemon app.js",
+    "start": "node app.js",
     "w-start": "START /B sass --watch public/sass:public/css & nodemon app.js"
   },
   "author": "Javier Caballero",
