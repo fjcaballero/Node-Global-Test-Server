@@ -11,19 +11,13 @@
 	<link rel="icon" href="favicon.png" type="image/png"/>
 	<link rel="stylesheet" type="text/css" href="index.css">
 <!--
-  <link rel="import" href="google-hangout-button/google-hangout-button.html">
-
-  <link rel="import" href="WeChat-Web-Component/wechat-login/wechat-login.html">
-  <link rel="import" href="WeChat-Web-Component/wechat-wc/wechat-wc.html">
-
-  <script src="https://res.wx.qq.com/connect/zh_CN/htmledition/js/wxLogin.js"></script>
 
   <link rel="import" href="pinterest-timeline/pinterest-timeline.html">
-	<link rel="import" href="Telegram-Web-Component/telegram-wc.html">
--->
 	<link rel="import" href="reddit-login/reddit-login.html">
   <link rel="import" href="reddit-timeline/reddit-timeline.html">
 
+	<link rel="import" href="Telegram-Web-Component/telegram-wc.html">
+-->
 	<link rel="import" href="youtube-login/youtube-login.html">
   <link rel="import" href="youtube-wc/youtube-wc.html">
 
@@ -36,37 +30,12 @@
 
 	<template is="dom-bind" id="Demo">
 <!--
-
-		<wechat-login
-			app_id="{{config.wc_appID}}"
-			app_secret="{{config.wc_appSecret}}"
-		></wechat-login>
-
-		<wechat-wc
-			app_id="{{config.wc_appID}}"
-			app_secret="{{config.wc_appSecret}}"
-			redirect_uri="https://localhost:8080"
-		></wechat-wc>
-
-
-		<google-hangout-button 
-			width="100" 
-			invites='[
-			{"id":"javichuck@gmail.com", "invite_type":"email"}
-			]'
-		></google-hangout-button>
-
-		<script type="text/javascript" src="https://apis.google.com/js/platform.js"></script>
-<g:hangout render="createhangout"></g:hangout>
-
-
 		<pinterest-timeline class="component"
       token="AVA62Z-XM63uG2AaHIlZLLKQD5QYFHZKY4Xy7atDaxDMLKAvZgAAAAA"
       language="{{language}}"
       component_base="pinterest-timeline/demo/"
       >
     </pinterest-timeline>
--->
 		<reddit-login class="component"
 			client_id="kQrG_70aW76SmQ"
 			redirect_uri="http://localhost:8080/"
@@ -84,6 +53,10 @@
 		>
 		</reddit-timeline>
 
+		<telegram-wc>
+		</telegram-wc>
+-->
+
 		<youtube-login class="component"
       client_id="643464834207-pmbgf26rk5a9ugvkjub7a9e2am3jhcd1.apps.googleusercontent.com"
       redirect_uri="http://localhost:8080/"
@@ -91,7 +64,7 @@
     </youtube-login>
 
     <youtube-wc class="component"
-      token="ya29.Ci-tA23PNMVNyykZrIQvmeCTj4FBZ2w_IIaMLNqkYNPEn5SuJZUh3N993U_nDYBOtw"
+      token="ya29.Ci-6A5lF9NcAOMNF4CUnLN29gXSusPMl-KNqbC5UWeZ7VSFA5oeX9Rh0VZxh22TTMg"
       api_key="AIzaSyDbs_ZJQLM6poQPJJ9GVNjbJkCCWP83pJw"
       client_id="643464834207-pmbgf26rk5a9ugvkjub7a9e2am3jhcd1.apps.googleusercontent.com"
       component_base="youtube-wc/"
@@ -99,9 +72,6 @@
     >
     </youtube-wc>
 
-
-		<telegram-wc>
-		</telegram-wc>
 
 
     <div class="lanMenu">
@@ -116,6 +86,10 @@
 			}
 			$.getJSON("config", function(json) {
 			    Demo.config = json;
+			});
+
+			$(document).on('youtube-logged', function(event){
+				console.log('Evento', event.originalEvent.detail);
 			});
 		</script>
 

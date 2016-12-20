@@ -15,12 +15,12 @@ app.use(express.static('node_modules'));
 app.use(express.static('bower_components'));
 
 //webcomponents heroku
-app.use(express.static('lib'));
+//app.use(express.static('lib'));
 
 //WebComponents local
 app.use(express.static('../WebComponents'));
 app.use(express.static('../Versionado'));
-app.use(express.static('../WebComponents2.0'));
+app.use(express.static('../'));
 
 
 app.get('/', function (req, res) {

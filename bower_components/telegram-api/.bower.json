@@ -1,0 +1,22 @@
+{
+  "name": "telegram-api",
+  "license": "GPL-3.0",
+  "ignore": [
+    "example",
+    "src",
+    "gulpfile.js",
+    "package.json"
+  ],
+  "homepage": "https://github.com/sunriselink/TelegramApi",
+  "version": "1.2.8",
+  "_release": "1.2.8",
+  "_resolution": {
+    "type": "version",
+    "tag": "1.2.8",
+    "commit": "b9276bd4928b99afb2968379027409cd65309206"
+  },
+  "_source": "https://github.com/sunriselink/TelegramApi.git",
+  "_target": "^1.2.8",
+  "_originalSource": "telegram-api-js",
+  "_direct": true
+}
