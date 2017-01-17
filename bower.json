@@ -32,6 +32,7 @@
     "google-hangout-button": "GoogleWebComponents/google-hangout-button#~1.0.2",
     "paper-styles": "PolymerElements/paper-styles#~1.1.5",
     "iron-media-query": "PolymerElements/iron-media-query#~1.0.8",
-    "telegram-api": "telegram-api-js#^1.2.8"
+    "telegram-api": "telegram-api-js#^1.2.8",
+    "byutv-jsonp": "^1.3.0"
   }
 }

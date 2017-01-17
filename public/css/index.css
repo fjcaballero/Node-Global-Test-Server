@@ -4,6 +4,15 @@ body {
 .title {
   color: #EEEEEE; }
 
+.container{
+  display: inline-flex;
+  max-width: 100%;
+}
+
+.componentGroup{
+  flex-direction: column;
+}
+
 .component {
   margin: 5px; }
 

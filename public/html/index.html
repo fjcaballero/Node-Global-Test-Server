@@ -10,16 +10,19 @@
 	<!-- Imports -->
 	<link rel="icon" href="favicon.png" type="image/png"/>
 	<link rel="stylesheet" type="text/css" href="index.css">
-<!--
 
+	<link rel="import" href="pinterest-login/pinterest-login.html">
   <link rel="import" href="pinterest-timeline/pinterest-timeline.html">
+
+	<link rel="import" href="instagram-lite/instagram-lite.html">
+
 	<link rel="import" href="reddit-login/reddit-login.html">
   <link rel="import" href="reddit-timeline/reddit-timeline.html">
 
-	<link rel="import" href="Telegram-Web-Component/telegram-wc.html">
--->
 	<link rel="import" href="youtube-login/youtube-login.html">
   <link rel="import" href="youtube-wc/youtube-wc.html">
+
+	<link rel="import" href="Telegram-Web-Component/telegram-wc.html">
 
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
@@ -29,48 +32,78 @@
 	<h1 class="title">Global Test Server</h1>
 
 	<template is="dom-bind" id="Demo">
-<!--
-		<pinterest-timeline class="component"
-      token="AVA62Z-XM63uG2AaHIlZLLKQD5QYFHZKY4Xy7atDaxDMLKAvZgAAAAA"
-      language="{{language}}"
-      component_base="pinterest-timeline/demo/"
-      >
-    </pinterest-timeline>
-		<reddit-login class="component"
-			client_id="kQrG_70aW76SmQ"
-			redirect_uri="http://localhost:8080/"
-			client_secret="ApEtzVGv0z0WZMQKPDm4vJJcdNM"
-		>
-		</reddit-login>
 
-		<reddit-timeline class="component"
-			client_id="kQrG_70aW76SmQ"
-			client_secret="ApEtzVGv0z0WZMQKPDm4vJJcdNM"
-			token="ppUTRqtIm7Zdgk_Mo5ujHW62898"
-			refresh_token="63851161-xf8Pp-6wryK1BZhBQAFdSU1shVQ"
-			component_base="reddit-timeline/"
-      language="{{language}}"
-		>
-		</reddit-timeline>
+	<div class="container">
 
-		<telegram-wc>
-		</telegram-wc>
--->
+		<!--div class="componentGroup">
+			<instagram-lite class="component"
+				token="2062815740.34af286.169a9c42e1404ae58591d066c00cb979"
+      	language="{{language}}"	
+			></instagram-lite>
+		</div-->
 
-		<youtube-login class="component"
-      client_id="643464834207-pmbgf26rk5a9ugvkjub7a9e2am3jhcd1.apps.googleusercontent.com"
-      redirect_uri="http://localhost:8080/"
-    >
-    </youtube-login>
+		<div class="componentGroup">
 
-    <youtube-wc class="component"
-      token="ya29.Ci-6A5lF9NcAOMNF4CUnLN29gXSusPMl-KNqbC5UWeZ7VSFA5oeX9Rh0VZxh22TTMg"
-      api_key="AIzaSyDbs_ZJQLM6poQPJJ9GVNjbJkCCWP83pJw"
-      client_id="643464834207-pmbgf26rk5a9ugvkjub7a9e2am3jhcd1.apps.googleusercontent.com"
-      component_base="youtube-wc/"
-      language="{{language}}"
-    >
-    </youtube-wc>
+			<pinterest-login class="component"></pinterest-login>
+
+			<pinterest-timeline class="component"
+				token="AVA62Z-XM63uG2AaHIlZLLKQD5QYFHZKY4Xy7atDaxDMLKAvZgAAAAA"
+				language="{{language}}"
+				component_base="pinterest-timeline/demo/"
+				>
+			</pinterest-timeline>	
+
+		</div>
+
+		<div class="componentGroup">
+
+			<reddit-login class="component"
+				client_id="kQrG_70aW76SmQ"
+				redirect_uri="http://localhost:8080/"
+				client_secret="ApEtzVGv0z0WZMQKPDm4vJJcdNM"
+			>
+			</reddit-login>
+
+			<reddit-timeline class="component"
+				client_id="kQrG_70aW76SmQ"
+				client_secret="ApEtzVGv0z0WZMQKPDm4vJJcdNM"
+				token="ppUTRqtIm7Zdgk_Mo5ujHW62898"
+				refresh_token="63851161-xf8Pp-6wryK1BZhBQAFdSU1shVQ"
+				component_base="reddit-timeline/"
+				language="{{language}}"
+			>
+			</reddit-timeline>
+			
+		</div>
+
+		<div class="componentGroup">
+			
+			<youtube-login class="component"
+				client_id="643464834207-pmbgf26rk5a9ugvkjub7a9e2am3jhcd1.apps.googleusercontent.com"
+				redirect_uri="http://localhost:8080/"
+			>
+			</youtube-login>
+
+			<youtube-wc class="component"
+				token="ya29.Ci-6A5lF9NcAOMNF4CUnLN29gXSusPMl-KNqbC5UWeZ7VSFA5oeX9Rh0VZxh22TTMg"
+				api_key="AIzaSyDbs_ZJQLM6poQPJJ9GVNjbJkCCWP83pJw"
+				client_id="643464834207-pmbgf26rk5a9ugvkjub7a9e2am3jhcd1.apps.googleusercontent.com"
+				component_base="youtube-wc/"
+				language="{{language}}"
+			>
+			</youtube-wc>
+
+		</div>
+
+		<div class="componentGroup">
+			<telegram-wc class="component">
+			</telegram-wc>
+		</div>
+
+	</div>
+
+
+
 
 
 
