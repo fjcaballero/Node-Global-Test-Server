@@ -1,0 +1,27 @@
+{
+  "name": "Telegram-Web-Component",
+  "homepage": "https://github.com/fjcaballero/Telegram-Web-Component",
+  "authors": [
+    "Javier Caballero <javier.caballero.abenza@gmail.com>"
+  ],
+  "description": "",
+  "main": "telegram-wc.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "telegram-api": "telegram-api-js#^1.2.8",
+    "polymer": "Polymer/polymer#^1.1.0",
+    "iron-icon": "^1.0.12",
+    "iron-icons": "^1.2.0",
+    "paper-icon-button": "^1.1.4",
+    "paper-toolbar": "^1.1.7",
+    "paper-behaviors": "^1.0.12",
+    "paper-button": "^1.0.14"
+  }
+}
