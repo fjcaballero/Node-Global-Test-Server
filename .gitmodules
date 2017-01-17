@@ -1,0 +1,3 @@
+[submodule "lib/Telegram-Web-Component"]
+	path = lib/Telegram-Web-Component
+	url = https://github.com/fjcaballero/Telegram-Web-Component
